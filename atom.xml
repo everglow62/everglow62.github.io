@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[John的钊]]></title>
+  <link href="http://everglow62.github.io/atom.xml" rel="self"/>
+  <link href="http://everglow62.github.io/"/>
+  <updated>2017-03-13T14:37:34+08:00</updated>
+  <id>http://everglow62.github.io/</id>
+  <author>
+    <name><![CDATA[JohnShen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First Blog]]></title>
+    <link href="http://everglow62.github.io/blog/2017/03/13/my-first-blog/"/>
+    <updated>2017-03-13T14:35:19+08:00</updated>
+    <id>http://everglow62.github.io/blog/2017/03/13/my-first-blog</id>
+    <content type="html"><![CDATA[<p>又是一篇第一篇😉</p>
+]]></content>
+  </entry>
+  
+</feed>
