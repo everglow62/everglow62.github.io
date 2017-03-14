@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Begin | John里的钊]]></title>
+  <link href="http://everglow62.github.io/blog/categories/begin/atom.xml" rel="self"/>
+  <link href="http://everglow62.github.io/"/>
+  <updated>2017-03-14T20:53:06+08:00</updated>
+  <id>http://everglow62.github.io/</id>
+  <author>
+    <name><![CDATA[JohnShen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[02-线性结构1 两个有序链表序列的合并]]></title>
+    <link href="http://everglow62.github.io/blog/2017/03/14/02-xian-xing-jie-gou-1-liang-ge-you-xu-lian-biao-xu-lie-de-he-bing/"/>
+    <updated>2017-03-14T20:36:21+08:00</updated>
+    <id>http://everglow62.github.io/blog/2017/03/14/02-xian-xing-jie-gou-1-liang-ge-you-xu-lian-biao-xu-lie-de-he-bing</id>
+    <content type="html"><![CDATA[<p>本题要求实现一个函数，将两个链表表示的递增整数序列合并为一个非递减的整数序列。</p>
+
+<pre><code class="C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef int ElementType;
+typedef struct Node *PtrToNode;
+struct Node {
+    ElementType Data;
+    PtrToNode   Next;
+};
+typedef PtrToNode List;
+
+List Read(); /* 细节在此不表 */
+void Print( List L ); /* 细节在此不表；空链表将输出NULL */
+
+List Merge( List L1, List L2 );
+
+int main()
+{
+    List L1, L2, L;
+    L1 = Read();
+    L2 = Read();
+    L = Merge(L1, L2);
+    Print(L);
+    Print(L1);
+    Print(L2);
+    return 0;
+}
+
+/* 你的代码将被嵌在这里 */
+</code></pre>
+
+<p>输入样例：</p>
+
+<pre><code>3
+1 3 5
+5
+2 4 6 8 10
+</code></pre>
+
+<p>输出样例：</p>
+
+<pre><code>1 2 3 4 5 6 8 10 
+NULL
+NULL
+</code></pre>
+
+<p>样例代码：</p>
+
+<pre><code class="C">#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+typedef int ElementType;
+typedef struct Node *PtrToNode; //定义新类型，名字为PtrToNode，类型为指向Node结构体的指针
+struct Node{
+    ElementType Data;
+    PtrToNode Next;
+};
+typedef PtrToNode List; //❤️定义一个链表，存储的数据格式是Node结构体，名字为List
+
+List Read();
+void Print(List L); //注意括号里带参数的数据类型
+List Merge(List L1, List L2);
+
+int main(){
+    List L1, L2, L;
+    L1 = Read();
+    L2 = Read();
+    L = Merge(L1, L2);
+    Print(L);
+    Print(L1);
+    Print(L2);
+
+    return 0;
+}
+List Merge(List L1, List L2){
+    List r;
+    PtrToNode L = (PtrToNode)malloc(sizeof(struct Node));   //malloc出struct Node大小的空间，类型转换为PtrToNode，❤️这是头指针
+    List p = L1-&gt;Next;
+    List q = L2-&gt;Next;
+    r = L;
+    L-&gt;Next = NULL;
+    while (p != NULL &amp;&amp; q != NULL) {
+        if (p-&gt;Data &lt; q-&gt;Data) {
+            r-&gt;Next = p;
+            p = p-&gt;Next;
+            r = r-&gt;Next;
+        }
+        else{
+            r-&gt;Next = q;
+            q = q-&gt;Next;
+            r = r-&gt;Next;
+        }
+    }
+    r-&gt;Next = NULL;
+    if (p != NULL) {
+        r-&gt;Next = p;
+    }
+    if (q != NULL) {
+        r-&gt;Next = q;
+    }
+    L1-&gt;Next = NULL;
+    L2-&gt;Next = NULL;
+    return L;
+}
+List Read(){
+    int len = 0;
+    int num = 0;
+    PtrToNode h = NULL;
+    PtrToNode last = NULL;
+
+    scanf("%d", &amp;len);
+    if(len == 0){
+        return NULL;
+    }
+    h = (PtrToNode)malloc(sizeof(struct Node));
+    h-&gt;Next = NULL;
+    last = h;
+    while(len){
+        scanf("%d", &amp;num);
+        PtrToNode node = (PtrToNode)malloc(sizeof(struct Node));
+        node-&gt;Data = num;
+        node-&gt;Next = NULL;
+        last-&gt;Next = node;
+        last = node;
+        len--;
+    }
+    return h;
+}
+void Print(List L){
+    if (L-&gt;Next == NULL) {
+        printf("NULL\n");
+        return ;
+    }
+    L = L-&gt;Next;
+    while (L != NULL) {
+        printf("%d ", L-&gt;Data);
+        L = L-&gt;Next;
+    }
+    putchar('\n');
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
