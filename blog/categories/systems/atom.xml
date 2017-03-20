@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Systems | John里的钊]]></title>
+  <link href="http://everglow62.github.io/blog/categories/systems/atom.xml" rel="self"/>
+  <link href="http://everglow62.github.io/"/>
+  <updated>2017-03-20T16:55:27+08:00</updated>
+  <id>http://everglow62.github.io/</id>
+  <author>
+    <name><![CDATA[JohnShen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UCore实验环境搭建]]></title>
+    <link href="http://everglow62.github.io/blog/2017/03/20/ucoreshi-yan-huan-jing-da-jian/"/>
+    <updated>2017-03-20T16:36:52+08:00</updated>
+    <id>http://everglow62.github.io/blog/2017/03/20/ucoreshi-yan-huan-jing-da-jian</id>
+    <content type="html"><![CDATA[<p>​       清华大学的UCore和MIT的xv6比较类似，都需要用到i386-elf-gcc来编译，但在Mac上安装比较麻烦，所以我选择安装Ubuntu虚拟机。</p>
+
+<p>​ 这个虚拟机只做编译时使用，需要coding和qemu运行时，仍在Mac主机上进行，这就需要为Ubuntu虚拟机和主机设置共享文件夹。步骤如下：</p>
+
+<ul>
+<li>在VirtualBox中安装增强插件</li>
+<li>开机前设置，共享文件夹名称、位置，❗️不要勾选自动挂载</li>
+<li>开机后terminal，sudo mount -t vboxsf (共享文件夹名) /mnt/(挂载点名)</li>
+</ul>
+
+
+<p>完成😀</p>
+]]></content>
+  </entry>
+  
+</feed>

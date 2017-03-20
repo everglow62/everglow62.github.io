@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://everglow62.github.io/blog/2017/03/20/ucoreshi-yan-huan-jing-da-jian/</loc>
+<lastmod>2017-03-20T16:36:52+08:00</lastmod>
+</url>
+<url>
 <loc>http://everglow62.github.io/blog/2017/03/14/02-xian-xing-jie-gou-1-liang-ge-you-xu-lian-biao-xu-lie-de-he-bing/</loc>
 <lastmod>2017-03-14T20:36:21+08:00</lastmod>
 </url>
@@ -22,5 +26,11 @@
 </url>
 <url>
 <loc>http://everglow62.github.io/blog/categories/again/</loc>
+</url>
+<url>
+<loc>http://everglow62.github.io/blog/categories/operating/</loc>
+</url>
+<url>
+<loc>http://everglow62.github.io/blog/categories/systems/</loc>
 </url>
 </urlset>
